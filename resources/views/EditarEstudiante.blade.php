@@ -6,11 +6,6 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Editar Estudiante</div>
-                @if(session()->has('msjeditado'))
-                <div class="alert alert-success" role="alert">
-                Empresa Editada Carrectamente.!
-                </div>
-                @endif
                 <div class="card-body">
                 <form action="{{ route('Controller.UpdateEstudiante') }}" method="POST">
                 @csrf
@@ -21,9 +16,9 @@
                     <div class="form-group">
                         <input type="hidden" name="Id" value="{{$dato->id}}">
                         <strong>Editar Nombre Del Estudiante:</strong>
-                        <input type="text" name="Nombre" class="form-control" placeholder="{{$dato->names}}">
+                        <input type="text" name="Nombre" class="form-control" placeholder="{{$dato->names}}" required=true>
                         <strong>Editar Edad Del Estudiante:</strong>
-                        <input type="text" name="Edad" class="form-control" placeholder="{{$dato->edad}}">
+                        <input type="text" name="Edad" class="form-control" placeholder="{{$dato->edad}}" required=true>
                         <strong>Curso Actual: {{$dato->nombre_curso}}</strong>
                         <br><br>
                         <strong>Salón Actual: {{$dato->salon}}</strong>

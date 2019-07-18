@@ -10,11 +10,6 @@
                     <strong>{{$dato->nombre_curso}}</strong>
                 @endforeach                    
                 </div>
-                @if(session()->has('msjeditado'))
-                <div class="alert alert-success" role="alert">
-                Empresa Editada Carrectamente.!
-                </div>
-                @endif
                 <div class="card-body">
                
                 <strong>Estudiantes Del Curso</strong>

@@ -7,20 +7,6 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Cursos</div>
-                
-                @if(session()->has('msjeliminado'))
-                <div class="alert alert-success" role="alert">
-                Empresa Eliminado Correctamente.!
-                </div>
-                @endif
-                @if(session()->has('msjcreado'))
-                <div class="alert alert-primary" role="alert">
-                Curso Creado Correctamente.!
-                </div>
-                @endif
-                
-                
-                
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
